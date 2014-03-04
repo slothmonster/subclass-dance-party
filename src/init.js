@@ -21,13 +21,50 @@ $(document).ready(function(){
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
-
     var dancer = dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
+    window.dancers.push(dancer);
     $('body').append(dancer.$node);
   });
+  $(".addImageDancerButton").on("click", function(event){
+      var imgUrl = prompt("Put in the URL of a gif");
+      var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
+
+      // get the maker function for the kind of dancer we're supposed to make
+      var dancerMakerFunction = window[dancerMakerFunctionName];
+
+      // make a dancer with a random position
+      var dancer = dancerMakerFunction(
+        $("body").height() * Math.random(),
+        $("body").width() * Math.random(),
+        Math.random() * 1000,
+        imgUrl
+      );
+      window.dancers.push(dancer);
+      $('body').append(dancer.$node);
+    });
+
+  $(".addSpriteDancerButton").on("click", function(event){
+      var imgUrl = "images/sprite_nes.png";
+      var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
+
+      // get the maker function for the kind of dancer we're supposed to make
+      var dancerMakerFunction = window[dancerMakerFunctionName];
+      var top = $("body").height() * Math.random();
+      var left = $("body").width() * Math.random();
+      // make a dancer with a random position
+      //debugger;
+      var dancer = dancerMakerFunction(
+        top,
+        left,
+        100,
+        imgUrl, 32, 32
+      );
+      window.dancers.push(dancer);
+      $('body').append(dancer.$node);
+    });  
 });
 

@@ -9,7 +9,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .addImageDancerButton, .addSpriteDancerButton{
   padding:5px 12px;
   float:right;
 }
@@ -24,4 +24,15 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+.gif {
+  position: absolute;
+}
+.sprite {
+  background-position: 0 0;
+  -webkit-transform: scale(3);
+  -moz-transform: scale(3);
+  -ms-transform: scale(3);
+  -0-transform: scale(3);
+  transform: scale(3);
 }

@@ -6,7 +6,7 @@ describe("blinkyDancer", function() {
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    blinkyDancer = makeBlinkyDancer(10, 20, timeBetweenSteps);
+    blinkyDancer = BlinkyDancer(10, 20, timeBetweenSteps);
   });
 
   it("should have a jQuery $node object", function(){
@@ -26,10 +26,10 @@ describe("blinkyDancer", function() {
       clock.tick(timeBetweenSteps);
       clock.tick(timeBetweenSteps); // Why do we have a 2nd call?
 
-      expect(blinkyDancer.step.callCount).to.be.equal(1);
+      expect(blinkyDancer.step.callCount).to.be.equal(2); // used to be 1
 
       clock.tick(timeBetweenSteps);
-      expect(blinkyDancer.step.callCount).to.be.equal(2);
+      expect(blinkyDancer.step.callCount).to.be.equal(3); // used to be 2
     });
   });
 });
