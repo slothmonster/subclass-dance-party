@@ -16,6 +16,11 @@ body, a:link, a:visited, a:active{
 .topbar{
   height:32px;
   background-color: #555;
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .title{
   background-color: #777;
@@ -30,9 +35,9 @@ body, a:link, a:visited, a:active{
 }
 .sprite {
   background-position: 0 0;
-  /*-webkit-transform: scale(3);
-  -moz-transform: scale(3);
-  -ms-transform: scale(3);
-  -0-transform: scale(3);
-  transform: scale(3);*/
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -0-transform: scale(1.5);
+  transform: scale(1.5);
 }
