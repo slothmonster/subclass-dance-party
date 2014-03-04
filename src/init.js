@@ -48,7 +48,7 @@ $(document).ready(function(){
     });
 
   $(".addSpriteDancerButton").on("click", function(event){
-      var imgUrl = "images/sprite_nes.png";
+      var imgUrl = "images/sprite_mustache.png";
       var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
 
       // get the maker function for the kind of dancer we're supposed to make
@@ -60,8 +60,8 @@ $(document).ready(function(){
       var dancer = dancerMakerFunction(
         top,
         left,
-        100,
-        imgUrl, 32, 32
+        50,
+        imgUrl, 128, 128
       );
       window.dancers.push(dancer);
       $('body').append(dancer.$node);
