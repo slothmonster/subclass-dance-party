@@ -32,7 +32,7 @@ SpriteDancer.prototype.display = function(imgUrl){
 		var imgWidth = imgNode.width;
 		var horizontalFrames = Math.floor(imgWidth/that._width);
 		var verticalFrames = Math.floor(imgHeight/that._height);
-		for(var i=0; i<verticalFrames; i++){
+		for(var i=0; i<verticalFrames; i++){ 
 			for(var j=0; j<horizontalFrames; j++){
 				that._positions.push({
 					"background-position": (j * that._width) + "px " + (i * that._height) + "px" 

@@ -26,7 +26,7 @@ $(document).ready(function(){
       "name": "scorpion",
       "height": 65,
       "width": 37,
-      "url": "images/sprite_scorpion.jpeg",
+      "url": "images/sprite_scorpion.png",
       interval: 100
     },
     {
@@ -64,12 +64,12 @@ $(document).ready(function(){
 
     // make a dancer with a random position
     var dancer = dancerMakerFunction(
-      $("body").height() * Math.random(),
+      ($("body").height()-100) * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
     // window.dancers.push(dancer);
-    $('body').append(dancer.$node);
+    $('.danceFloor').append(dancer.$node);
   });
   $(".addImageDancerButton").on("click", function(event){
       var imgUrl = prompt("Put in the URL of a gif");
@@ -80,13 +80,13 @@ $(document).ready(function(){
 
       // make a dancer with a random position
       var dancer = dancerMakerFunction(
-        $("body").height() * Math.random(),
+        ($("body").height()-100) * Math.random(),
         $("body").width() * Math.random(),
         Math.random() * 1000,
         imgUrl
       );
       // window.dancers.push(dancer);
-      $('body').append(dancer.$node);
+      $('.danceFloor').append(dancer.$node);
     });
 
   $(".addSpriteDancerButton").on("click", function(event){
@@ -95,7 +95,7 @@ $(document).ready(function(){
 
       // get the maker function for the kind of dancer we're supposed to make
       var dancerMakerFunction = window[dancerMakerFunctionName];
-      var top = $("body").height() * Math.random();
+      var top = ($("body").height()-100) * Math.random();
       var left = $("body").width() * Math.random();
       var spriteNumber = Math.floor(Math.random() * window.sprites.length);
       // make a dancer with a random position
@@ -107,7 +107,7 @@ $(document).ready(function(){
         window.sprites[spriteNumber].url, window.sprites[spriteNumber].height, window.sprites[spriteNumber].width
       );
       // window.dancers.push(dancer);
-      $('body').append(dancer.$node);
+      $('.danceFloor').append(dancer.$node);
     });  
   $('.lineup').click(function(){
     window.dancers.forEach(function(dancer){

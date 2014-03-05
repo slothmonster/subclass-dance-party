@@ -20,6 +20,9 @@ Dancer.prototype.step = function(){
   setTimeout(function(){
     that.step();
   }, this._timeBetweenSteps);
+
+
+
   if(this.chaseMouse){
     var posY = parseInt(this.$node.css('top').replace('px','')) + ($(this.$node).height() / 2);
     var posX = parseInt(this.$node.css('left').replace('px',''))  + ($(this.$node).width() / 2);
@@ -62,6 +65,6 @@ Dancer.prototype.moveRandomly = function() {
   this.chaseMouse = false;
   this.$node.animate({ 
     "left": ( Math.random() * window.innerWidth ) + "px",
-    "top": ( Math.random() * window.innerHeight ) + "px"
+    "top": ( Math.random() * (window.innerHeight - 100) ) + "px"
   }, 1000);
 }

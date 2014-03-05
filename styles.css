@@ -5,6 +5,11 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -29,15 +34,52 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+  -webkit-transform: rotateX(-75deg);
+  -moz-transform: rotateX(-75deg);
+  -ms-transform: rotateX(-75deg);
+  -o-transform: rotateX(-75deg);
+  transform: rotateX(-75deg);
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
 }
 .gif {
   position: absolute;
+  -webkit-transform: rotateX(-75deg);
+  -moz-transform: rotateX(-75deg);
+  -ms-transform: rotateX(-75deg);
+  -o-transform: rotateX(-75deg);
+  transform: rotateX(-75deg);
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 .sprite {
   background-position: 0 0;
-  -webkit-transform: scale(1.5);
-  -moz-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  -0-transform: scale(1.5);
-  transform: scale(1.5);
+}
+
+.danceFloor {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  -webkit-transform: rotateX(75deg);
+  -moz-transform: rotateX(75deg);
+  -ms-transform: rotateX(75deg);
+  -o-transform: rotateX(75deg);
+  transform: rotateX(75deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
