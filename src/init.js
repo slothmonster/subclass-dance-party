@@ -36,11 +36,39 @@ $(document).ready(function(){
       "url": "images/sprite_contra.png",
       interval: 100
     },
+    {
+      "name": "girl",
+      "height": 128,
+      "width": 110,
+      "url": "images/sprite_girldance.png",
+      interval: 60
+    },
+    {
+      "name": "girl",
+      "height": 32,
+      "width": 32,
+      "url": "images/sprite_strawberry.png",
+      interval: 60
+    },
+    {
+      "name": "girl",
+      "height": 264,
+      "width": 213,
+      "url": "images/sprite_boydance.png",
+      interval: 60
+    }
   ];
 
   $(document).on('mousemove', function(e){
     window.mouseX = e.clientX;
     window.mouseY = e.clientY;
+    var halfHeight = window.innerHeight / 2;
+    var halfWidth = window.innerWidth / 2;
+    var persX = ((e.clientX - halfWidth)/6) + halfWidth;
+    var persY = ((e.clientY - halfHeight)/6) + halfHeight;
+    $('body').css({
+      '-webkit-perspective-origin' : persX + "px " + persY + "px"
+    });
   });
 
   var floor = new Floor();

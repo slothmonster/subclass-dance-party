@@ -3,8 +3,9 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-color:;
   font-size: 18px;
+  background-image:url("images/pulsingbackground.gif");
   -webkit-perspective: 800px;
   -moz-perspective: 800px;
   -ms-perspective: 800px;
