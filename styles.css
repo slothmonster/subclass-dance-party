@@ -83,3 +83,12 @@ body, a:link, a:visited, a:active{
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
+
+.tile {
+  position: absolute;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -ms-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+}
