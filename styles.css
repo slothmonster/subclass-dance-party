@@ -5,7 +5,8 @@ body{
   margin: 0px;
   background-color:;
   font-size: 18px;
-  background-image:url("images/pulsingbackground.gif");
+  background-image:url("http://fc01.deviantart.net/fs71/f/2010/128/7/a/Spiral_Anim_40_by_LordSqueak.gif");
+  background-size: cover;
   -webkit-perspective: 800px;
   -moz-perspective: 800px;
   -ms-perspective: 800px;
@@ -69,7 +70,6 @@ body, a:link, a:visited, a:active{
 }
 
 .danceFloor {
-  background-color: white;
   height: 100%;
   width: 100%;
   position: relative;
@@ -92,4 +92,5 @@ body, a:link, a:visited, a:active{
   -ms-transition: 1s ease;
   -o-transition: 1s ease;
   transition: 1s ease;
+  opacity: 0.7;
 }
