@@ -1,3 +1,12 @@
+window.requestAnimFrame = (function(){
+  return  window.requestAnimationFrame       ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          function( callback ){
+            window.setTimeout(callback, 1000 / 60);
+          };
+})();
+
 $(document).ready(function(){
   window.dancers = [];
   window.sprites = [
@@ -44,18 +53,18 @@ $(document).ready(function(){
       interval: 60
     },
     {
-      "name": "girl",
+      "name": "strawberry",
       "height": 32,
       "width": 32,
       "url": "images/sprite_strawberry.png",
       interval: 60
     },
     {
-      "name": "girl",
+      "name": "boy",
       "height": 264,
       "width": 213,
       "url": "images/sprite_boydance.png",
-      interval: 60
+      interval: 70
     }
   ];
 
@@ -64,12 +73,19 @@ $(document).ready(function(){
     window.mouseY = e.clientY;
     var halfHeight = window.innerHeight / 2;
     var halfWidth = window.innerWidth / 2;
-    var persX = ((e.clientX - halfWidth)/6) + halfWidth;
-    var persY = ((e.clientY - halfHeight)/6) + halfHeight;
-    $('body').css({
-      '-webkit-perspective-origin' : persX + "px " + persY + "px"
-    });
+    window.persX = ((e.clientX - halfWidth)/6) + halfWidth;
+    window.persY = ((e.clientY - halfHeight)/6) + halfHeight;    
   });
+
+  var animLoop = function(){
+    $('body').css({
+      '-webkit-perspective-origin' : window.persX + "px " + window.persY + "px"
+    });
+    requestAnimationFrame(animLoop);
+  };
+
+  animLoop();
+
 
   var floor = new Floor();
 

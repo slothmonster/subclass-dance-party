@@ -94,3 +94,7 @@ body, a:link, a:visited, a:active{
   transition: 1s ease;
   opacity: 0.7;
 }
+
+audio {
+  display: none;
+}
